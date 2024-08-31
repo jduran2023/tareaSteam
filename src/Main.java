@@ -48,7 +48,7 @@ public class Main
 
         System.out.println("-----------------TAREA STREAM----------------");
         System.out.println("----------------- 1 ----------------");
-        peliculas.stream().filter(p-> p.getEstreno()>=2000).forEach(System.out::println);
+        List<Pelicula> sublistado = peliculas.stream().filter(p-> p.getEstreno()>=2000).collect(Collectors.toList());
 
         System.out.println("----------------- 2 ----------------");
         String titulosS = peliculas.stream()
